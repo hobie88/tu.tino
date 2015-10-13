@@ -6,7 +6,9 @@ This distro has been implemented by merging two Qbo repositories:
 - Manon's HumanRobotics: https://github.com/HumaRobotics/ros-indigo-qbo-packages 
 
 If boards are not recognized:
+
 check USB port in all  .yaml files, for each node
+
 example:
 port1: /dev/ttyUSB0 
 port2: /dev/ttyUSB12
