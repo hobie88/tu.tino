@@ -44,7 +44,6 @@ void theora_callback(const sensor_msgs::ImageConstPtr& msg)
 		try
 		{
 			cv_ptr = cv_bridge::toCvShare(msg,"bgr8");
-			ROS_DEBUG("within try block");
 			cv::imshow("theora_callback", cv_ptr->image);
 
 		}
@@ -52,9 +51,9 @@ void theora_callback(const sensor_msgs::ImageConstPtr& msg)
 		{
 			ROS_ERROR("Could not open video stream: exception %s.", e.what());
 		}
-		ROS_DEBUG("before waitkey");
+
 		cv::waitKey(10);
-		ROS_DEBUG("after waitkey");
+
 }
 
 
