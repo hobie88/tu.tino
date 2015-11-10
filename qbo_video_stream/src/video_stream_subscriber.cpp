@@ -3,18 +3,13 @@
 #include <image_transport/image_transport.h>
 #include <cv_bridge/cv_bridge.h>
 #include "TopicReader.h"
-#include <log4cxx/logger.h> //for debugging messages
 
-//#define DEBUG //uncomment for debugging messages
 
 void theora_callback(const sensor_msgs::ImageConstPtr&);
 
 int main(int argc, char** argv)
 {
-#ifdef DEBUG
-	log4cxx::Logger::getLogger(ROSCONSOLE_DEFAULT_NAME)->setLevel(ros::console::g_level_lookup[ros::console::levels::Debug]);
-	ros::console::notifyLoggerLevelsChanged();
-#endif
+
 	ros::init(argc,argv,"video_stream_subscriber");
 	ros::NodeHandle n;
 	image_transport::ImageTransport it(n);
@@ -36,7 +31,6 @@ int main(int argc, char** argv)
 
 void theora_callback(const sensor_msgs::ImageConstPtr& msg)
 {
-		ROS_DEBUG("theora_callback called");
 		cv::namedWindow("theora_callback",CV_WINDOW_AUTOSIZE);
 //		cv_bridge::CvImagePtr cv_ptr;
 		cv_bridge::CvImageConstPtr cv_ptr;
