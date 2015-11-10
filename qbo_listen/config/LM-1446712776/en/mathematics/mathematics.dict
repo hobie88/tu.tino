@@ -1,0 +1,32 @@
+0	[<s>]	sil
+1	[</s>]	sil
+2	[DOT]	d aa t
+3	[PLUS]	p l ah s
+4	[MULTIPLY]	m ah l t ax p l ay
+5	[ZERO]	z ih r ow
+6	[ONE]	w ah n
+7	[TWO]	t uw
+8	[THREE]	th r iy
+9	[FOUR]	f ao r
+10	[FIVE]	f ay v
+11	[SIX]	s ih k s
+12	[SEVEN]	s eh v ax n
+13	[EIGHT]	ey t
+14	[NINE]	n ay n
+15	[TEN]	t eh n
+16	[TWELVE]	t w eh l v
+17	[THIRTEEN]	th er t iy n
+18	[FOURTEEN]	f ao r t iy n
+19	[FIFTEEN]	f ix f t iy n
+20	[SIXTEEN]	s ix k s t iy n
+21	[SEVENTEEN]	s eh v ax n t iy n
+22	[EIGHTEEN]	ey t iy n
+23	[NINETEEN]	n ay n t iy n
+24	[TWENTY]	t w eh n t iy
+25	[THIRTY]	th er dx iy
+26	[FORTY]	f ao r dx iy
+27	[FIFTY]	f ih f t iy
+28	[SIXTY]	s ih k s t iy
+29	[SEVENTY]	s eh v ax n t iy
+30	[EIGHTY]	ey dx iy
+31	[NINETY]	n ay n t iy

@@ -1,0 +1,16 @@
+<package>
+  <description brief="qbo_first_use">
+
+     qbo_first_use
+
+  </description>
+  <author>qbobot</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/qbo_first_use</url>
+  <depend package="rospy"/>
+  <depend package="qbo_talk"/>
+
+</package>
+
+
