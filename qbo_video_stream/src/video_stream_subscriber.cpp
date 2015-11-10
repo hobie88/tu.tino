@@ -19,11 +19,10 @@ int main(int argc, char** argv)
 	ros::NodeHandle n;
 	image_transport::ImageTransport it(n);
 
-/**************PROVA************************/
 	std::string stereo_ns_ = ros::names::resolve(std::string("stereo"));
 	std::string left_topic = ros::names::clean(stereo_ns_ + "/left/image_raw");
 	image_transport::Subscriber sub=it.subscribe(left_topic,100,&theora_callback);
-/***********END PROVA*********************/
+
 //	image_transport::Subscriber sub=it.subscribe("/stereo/left/image_raw",100,&theora_callback);
 
 //	image_transport::CameraSubscriber camSub= it.subscribeCamera("/stereo/left/image_raw",100,&subCameraCallback);
