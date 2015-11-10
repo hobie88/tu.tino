@@ -1,9 +1,8 @@
 # tu.tino
-Qbo distro based on Ubuntu 14.04 + ROS Indigo
+Qbo distro based on Ubuntu 11.10 (Oneiric Ocelot) + ROS Electric
 
-This distro has been implemented by merging two Qbo repositories:
-- Elpimous' Neorobot:  https://github.com/elpimous/Neo_robot/tree/master/INDIGO
-- Manon's HumanRobotics: https://github.com/HumaRobotics/ros-indigo-qbo-packages 
+This distro has been implemented starting from Qbo official Distro:
+- http://www.openqbo.org/downloads/openqbo_beta04.1-64bits.iso
 
 If boards are not recognized: check USB port in all  .yaml files, for each node 
 example:
