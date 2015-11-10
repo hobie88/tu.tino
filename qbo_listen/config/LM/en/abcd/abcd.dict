@@ -1,0 +1,55 @@
+0	[<s>]	sil
+1	[</s>]	sil
+2	[A]	ax
+3	[ALPHA]	ae l f ax
+4	[OF]	ah v
+5	[B]	b iy
+6	[BRAVO]	b r aa v ow
+7	[C]	s iy
+8	[CHARLIE]	ch aa r l iy
+9	[D]	d iy
+10	[DELTA]	d eh l t ax
+11	[E]	iy
+12	[ECHO]	eh k ow
+13	[F]	eh f
+14	[FOXTROT]	f aa k s t r aa t
+15	[G]	jh iy
+16	[GOLF]	g aa l f
+17	[H]	ey ch
+18	[HOTEL]	hh ow t eh l
+19	[I]	ay
+20	[INDIA]	ih n d iy ax
+21	[J]	jh ey
+22	[JULIET]	jh uw l iy eh t
+23	[K]	k ey
+24	[KILO]	k ih l ow
+25	[L]	eh l
+26	[LIMA]	l ay m ax
+27	[M]	ax m
+28	[MIKE]	m ay k
+29	[N]	ax n
+30	[NOVEMBER]	n ow v eh m b er
+31	[O]	ow
+32	[OSCAR]	ao s k er
+33	[P]	p iy
+34	[PAPA]	p aa p ax
+35	[Q]	k y uw
+36	[QUEBEC]	k w ax b eh k
+37	[R]	aa r
+38	[ROMEO]	r ow m iy ow
+39	[S]	eh s
+40	[SIERRA]	s iy eh r ax
+41	[T]	t iy
+42	[TANGO]	t ae ng g ow
+43	[U]	y uw
+44	[UNIFORM]	y uw n ax f ao r m
+45	[V]	v iy
+46	[VICTOR]	v ih k t er
+47	[W]	d ah b ax l y uw
+48	[WHISKEY]	w ih s k iy
+49	[X]	eh k s
+50	[X-RAY]	eh k s r ey
+51	[Y]	w ay
+52	[YANKEE]	y ae ng k iy
+53	[Z]	z iy
+54	[ZULU]	z uw l uw

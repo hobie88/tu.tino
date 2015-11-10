@@ -1,0 +1,21 @@
+<package>
+  <description brief="qbo_video_stream">
+
+     qbo_video_stream
+
+  </description>
+  <author>qbobot</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/qbo_video_stream</url>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="image_transport"/>
+  <depend package="cv_bridge"/>
+  <depend package="opencv2"/>
+  <depend package="sensor_msgs"/>
+
+</package>
+
+
