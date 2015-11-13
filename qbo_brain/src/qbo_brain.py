@@ -127,7 +127,7 @@ class CommonQboState(smach.State):
                 rospy.follow_face = True
                 rospy.set_param("/qbo_face_following/move_base", True)
 
-        elif self.state == "Default" and lang == "en" and sentence == "CAN YOU SPEAK SPANISH":
+        elif self.state == "Default" and (lang == "en" or lang =="it") and sentence == "CAN YOU SPEAK SPANISH":
             #CHANGE LANGUAGE
             self.subscribe.unregister()
             self.subscribe=rospy.Subscriber("/listen/es_default", Listened, self.listen_callback)	
@@ -137,7 +137,17 @@ class CommonQboState(smach.State):
             rospy.set_param("/system_lang", "es")
             speak_this("SI QUE PUEDO HABLAR ESPAÑOL")
   	
-        elif self.state == "Default" and lang == "es" and sentence == "PUEDES HABLAR INGLES":
+        elif self.state == "Deafult" and (lang == "es" or lang =="en") and sentence == "PUOI PARLARE ITALIANO":
+			#CHANGE LANGUAGE
+			self.subscribe.unregister()
+			self.subscribe=rospy.Subscriber("/listen/it_default", Listened, self.listen_callback)
+			lang_pub.publish(String("it"));
+			loadDictionary("it")
+			lang="it"
+			rospy.set_param("/system_lang","it")
+			speak_this("CERTO CHE POSSO PARLARE ITALIANO")
+
+        elif self.state == "Default" and (lang == "es" or lang =="it") and sentence == "PUEDES HABLAR INGLES":
             #CHANGE LANGUAGE
             self.subscribe.unregister()
             self.subscribe=rospy.Subscriber("/listen/en_default", Listened, self.listen_callback)
@@ -468,6 +478,7 @@ def main():
     rospy.init_node("qbo_brain")
     rospy.loginfo("Starting Qbo Brain")
     
+	#importing service definition
     client_speak = rospy.ServiceProxy("/qbo_talk/festival_say_no_wait", Text2Speach)
     rospy.loginfo("Waiting for the qbo_talk service to be active")
     rospy.wait_for_service('/qbo_talk/festival_say_no_wait')
@@ -477,10 +488,12 @@ def main():
 
 
     lang = 'en'
+    rospy.set_param("/system_lang","en")
 
     if rospy.has_param("/system_lang"):
          lang = rospy.get_param("/system_lang")
 
+    lang = 'en'
     rospy.loginfo("Language active: "+lang)
  
     loadDictionary(lang)
@@ -502,11 +515,14 @@ def main():
         smach.StateMachine.add('questions', questions(), transitions={'stop':'default', '':'exit'})
         smach.StateMachine.add('webi', webi(), transitions={'stop':'default', '':'exit'})
 
-
+	## Create and start the introspection server
     sis= smach_ros.IntrospectionServer('server_name',sm,'/SM_ROOT')
     sis.start()
+	# - server_name: this name is used to create a namespace for the ROS introspection topics. You can name this anything you like, as long as this name is unique in your system.
+	# - SM_ROOT: your state machine will show up under this name in the smach viewer. 
 
     speak_this(language["QBO BRAIN IS ACTIVE"])
+
 
     # Execute SMACH plan
     rospy.loginfo("State machine launched")

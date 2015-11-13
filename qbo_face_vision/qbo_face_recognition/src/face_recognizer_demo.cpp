@@ -169,9 +169,9 @@ void system_langCallback(const std_msgs::String::ConstPtr& language)
 	string lang = language->data;
 	ROS_INFO("Changing language to [%s]", language->data.c_str());
 	
-	if(lang != "es" && lang!="en")
+	if(lang != "es" && lang!="en" && lang != "it")
 	{
-		ROS_ERROR("INVALID LANGUAGE. ONLY ENGLISH AND SPANISH ARE AVAILABLE.");
+		ROS_ERROR("INVALID LANGUAGE. ONLY ENGLISH, ITALIAN AND SPANISH ARE AVAILABLE.");
 		return;
 	}
 	
@@ -375,7 +375,7 @@ int main(int argc, char **argv)
 	private_nh_ = new ros::NodeHandle;
 
 
-	string init_lang = "en";
+	string init_lang = "it";
 
 	if( private_nh_->getParam("/system_lang", init_lang))
 	{

@@ -34,7 +34,6 @@
 #include <geometry_msgs/Twist.h>
 #include <sensor_msgs/SetCameraInfo.h>
 
-
 #include <qbo_face_msgs/FacePosAndDist.h>
 
 class FaceFollower

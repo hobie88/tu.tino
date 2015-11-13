@@ -75,10 +75,10 @@ class Root(object):
         self.indexHtmlTemplate = Template(filename='templates/indexTemplate.html')
 
         self.lang = rospy.get_param("/system_lang", "en")
-    
+        
         #self.lang='en'
         #Load default dict
-        fp=open('lang/en.txt','r')
+        fp=open('lang/'+self.lang+'.txt','r')
         self.language=json.load(fp,'utf-8')
         fp.close()
         #Load specific dict if different to english
@@ -94,7 +94,7 @@ class Root(object):
                 self.lang = "en"
 
         #Post the system lang to ROS and set the Param
-        if self.lang == "en" or self.lang == "es" :
+        if self.lang == "en" or self.lang == "es" or self.lang == "it" :
             rospy.set_param("/system_lang", self.lang)
             lang_pub = rospy.Publisher('/system_lang', String)
             lang_pub.publish(String(self.lang))

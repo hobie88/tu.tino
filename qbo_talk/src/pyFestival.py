@@ -99,7 +99,7 @@ class FestivalClient(object):
         self._sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self._sock.settimeout(0.2)
         self.duration = 1.0
-        self.voice = "cmu_us_slt_arctic_clunits"
+        self.voice = "lp_diphone"
         
     def open(self):
         self._sock.connect((self._host, self._port))
