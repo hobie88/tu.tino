@@ -1,0 +1,12 @@
+{
+"soundCheck": "LoudSpeakers Check",
+"title_1_left_speaker": "Check",
+"title_2_left_speaker": "speaker di sinistra",
+"title_1_right_speaker": "Check",
+"title_2_right_speaker": "speaker di destra",
+"title_1_center_speaker": "Check",
+"title_2_center_speaker": "entrambi gli speakers",
+"sound_fine": "Ha suonato bene?",
+"yes": "Si",
+"no": "No"
+}

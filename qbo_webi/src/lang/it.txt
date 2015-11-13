@@ -5,7 +5,7 @@
 "teleop": "Teleoperation",
 "settings": "Impostazioni",
 "training": "Training",
-"qbo_questions_tab":"Questions & Answers",
+"qbo_questions_tab":"Domande & Risposte",
 "error_html5": "E' necessario un browser compatibile con HTML 5",
 "face_recognition": "Face Recognition",
 "object_recognition": "Object Recognition",
