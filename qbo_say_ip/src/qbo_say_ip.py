@@ -80,7 +80,10 @@ def sayIP():
 #        None
 #
 def say(sentence):
-    rospy.wait_for_service("/Qbo/festivalSay")
+    rospy.loginfo("Entring sayIp.say...waiting for /Qbo/festivalSay")
+    #rospy.wait_for_service("/Qbo/festivalSay")
+    rospy.wait_for_service("/qbo_talk/festival_say")
+    rospy.loginfo("service waited..calling Text2speech")
     festival = rospy.ServiceProxy("/qbo_talk/festival_say", Text2Speach  )
     
     festival(sentence)
